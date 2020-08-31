@@ -1,17 +1,17 @@
 <?php
 
-namespace Lord\Laroute\Generators;
+namespace Swoop\Laroute\Generators;
 
 use Illuminate\Filesystem\Filesystem;
-use Lord\Laroute\Compilers\CompilerInterface as Compiler;
+use Swoop\Laroute\Compilers\CompilerInterface as Compiler;
 
 interface GeneratorInterface
 {
     /**
      * Create a new template generator instance.
      *
-     * @param $compiler   \Lord\Laroute\Compilers\CompilerInterface
-     * @param $filesystem \Illuminate\Filesystem\Filesystem
+     * @param $compiler   Compiler
+     * @param $filesystem Filesystem
      *
      */
     public function __construct(Compiler $compiler, Filesystem $filesystem);

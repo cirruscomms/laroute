@@ -1,5 +1,7 @@
 <?php
 
-namespace Lord\Laroute\Routes\Exceptions;
+namespace Swoop\Laroute\Routes\Exceptions;
 
-class ZeroRoutesException extends \Exception { }
+use Exception;
+
+class ZeroRoutesException extends Exception { }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lord\Laroute\Compilers;
+namespace Swoop\Laroute\Compilers;
 
 interface CompilerInterface
 {

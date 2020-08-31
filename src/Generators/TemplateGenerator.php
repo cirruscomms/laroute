@@ -1,31 +1,32 @@
 <?php
 
-namespace Lord\Laroute\Generators;
+namespace Swoop\Laroute\Generators;
 
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
-use Lord\Laroute\Compilers\CompilerInterface as Compiler;
+use Swoop\Laroute\Compilers\CompilerInterface as Compiler;
 
 class TemplateGenerator implements GeneratorInterface
 {
     /**
      * The compiler instance.
      *
-     * @var \Lord\Laroute\Compilers\CompilerInterface
+     * @var Compiler
      */
     protected $compiler;
 
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var Filesystem
      */
     protected $filesystem;
 
     /**
      * Create a new template generator instance.
      *
-     * @param $compiler   \Lord\Laroute\Compilers\CompilerInterface
-     * @param $filesystem \Illuminate\Filesystem\Filesystem
+     * @param $compiler   Compiler
+     * @param $filesystem Filesystem
      *
      */
     public function __construct(Compiler $compiler, Filesystem $filesystem)
@@ -43,6 +44,7 @@ class TemplateGenerator implements GeneratorInterface
      * @param $filePath
      *
      * @return string
+     * @throws FileNotFoundException
      */
     public function compile($templatePath, Array $templateData, $filePath)
     {

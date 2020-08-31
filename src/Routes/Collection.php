@@ -1,11 +1,11 @@
 <?php
 
-namespace Lord\Laroute\Routes;
+namespace Swoop\Laroute\Routes;
 
 use Illuminate\Routing\Route;
 use Illuminate\Routing\RouteCollection;
 use Illuminate\Support\Arr;
-use Lord\Laroute\Routes\Exceptions\ZeroRoutesException;
+use Swoop\Laroute\Routes\Exceptions\ZeroRoutesException;
 
 class Collection extends \Illuminate\Support\Collection
 {
@@ -54,7 +54,7 @@ class Collection extends \Illuminate\Support\Collection
     /**
      * Get the route information for a given route.
      *
-     * @param $route \Illuminate\Routing\Route
+     * @param $route Route
      * @param $filter string
      * @param $namespace string
      *
